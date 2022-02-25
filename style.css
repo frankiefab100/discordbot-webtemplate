@@ -1,0 +1,197 @@
+
+:root {
+        --primary: #fff;
+        /* ^ Primary Color */
+        --secondary: rgba(255, 255, 255, 0.7);
+        /* ^ Secondary Color */
+        --bg-main: #181818;
+        /* ^ Body Background Color */
+        --bg-inner: #111111;
+        /* ^ Inner Background Color */
+}
+
+/* ---------------------------------------- IGNORE ---------------------------------------- */
+/* ----------------------------------------        ---------------------------------------- */
+/* ----------------------------------------        ---------------------------------------- */
+/* ----------------------------------------        ---------------------------------------- */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*
+{
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 16px;
+}
+
+ul, li{
+        padding: 0;
+        margin: 0;
+}
+
+body{
+        height: 100vh;
+        background: var(--bg-main);
+        overflow: hidden;
+}
+
+header{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        align-items: center;
+}
+
+header .header-logo{
+        color: var(--primary);
+        font-weight: 700;
+}
+
+header ul {
+        display: flex;
+}
+header ul li{
+        margin-left: 2.2em;
+        list-style: none;
+        color: var(--secondary);
+        font-weight: 400;
+        font-size: 1rem;
+        transition: opacity .1s ease-out;
+}
+
+header ul li:hover{
+        opacity: 70%;
+}
+
+header ul li:first-child {
+        color: var(--primary);
+}
+
+header ul li a{
+        color: inherit;
+        text-decoration: none;
+}
+
+main{
+        height: 85%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+}
+
+main .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5em;
+        height: max-content;
+        width: 100%;
+        background: var(--bg-inner);
+}
+
+main .inner .sub-headline{
+        font-size: 1.25rem;
+        color: var(--primary);
+        font-weight: 400;
+}
+
+main .inner .headline{
+        font-size: 6rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-top: .2em;
+        margin-bottom: .2em;
+}
+
+main .inner .paragraph{
+        color: var(--secondary);
+        font-size: 1.1rem;
+}
+
+main .inner .btn-container{
+        display: flex;
+}
+
+main .inner .btn-container a {
+        padding: 1em 2em;
+        border: 1px solid var(--primary);
+        margin: 1.4em .8em;
+        text-decoration:none;
+        position: relative;
+        border-radius: .2em;
+        font-size: 1.25rem;
+}
+
+main .inner .btn-container a.discord{
+        background: var(--primary);
+        color: var(--bg-main);
+        transition: color .3s ease-out, background .3s ease-out;
+}
+main .inner .btn-container a.discord:hover{
+        background: transparent;
+        color: var(--primary);
+}
+main .inner .btn-container a.github{
+        color: var(--primary);
+        transition: color .3s ease-out, background .3s ease-out;
+}
+
+main .inner .btn-container a.github:hover{
+        background: var(--primary);
+        color: var(--bg-main);
+}
+
+
+@media screen and (max-width: 930px){
+        *{
+                font-size: 14px;
+        }
+        main .inner .headline{
+                font-size: 4rem;
+        }
+}
+
+@media screen and (max-width: 650px){
+        main .inner .btn-container{
+                flex-direction: column;
+                margin-top: 1em;
+        }
+        main .inner .btn-container a{
+                margin-top: 0;
+                font-size: 1rem;
+                padding: 1em 5em;
+        }
+        main .inner .headline{
+                font-size: 3rem;
+        }
+        header{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;        
+        }
+        header ul li{
+                margin-left: .5em; margin-right: .5em; margin-top: 1em;
+        }
+        main .inner{
+                padding-top: 1em;
+                padding-bottom: 1em;
+        }
+}
+
+@media screen and (max-width: 410px){
+        *{
+                font-size: 12px;
+        }
+        main .inner{
+                padding: .2em;
+                padding-top: 2em;
+                padding-bottom: 1em;
+        }
+}
